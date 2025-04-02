@@ -1,0 +1,16 @@
+{
+  "name": "node-landing-page",
+  "version": "1.0.0",
+  "description": "A simple landing page served by a Node.js server using Express.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.14.1",
+    "sqlite3": "^5.1.7"
+  },
+  "author": "",
+  "license": "ISC"
+}

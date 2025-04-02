@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Arena</title>
+    <!-- Google Fonts: Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Top Header with Logo -->
+    <header class="top-header">
+        <div class="logo">
+            <img src="/assets/logo.png" >
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay">
+            <!-- Success Message -->
+            <div id="success-message" style="display: none;">
+                <h1>Thank You for Subscribing!</h1>
+                <p>Your subscription was successful. Stay tuned for updates, news, and exclusive content from Content Arena.</p>
+                <a href="/" class="button">Go Back to Home</a>
+            </div>
+
+            <!-- Subscription Form -->
+            <div id="subscribe-form">
+                <h1>Welcome to Content Arena</h1>
+                <p>The marketplace to sell and buy betting rights with easy plug-and-play video integration</p>
+                <p>Exciting updates are underway behind the scenes to enhance your experience with us. We appreciate your patience and look forward to welcoming you back soon with something even better. In the meantime, you are welcome to enter your email to be the first to know our significant developments!</p>
+                <form action="/subscribe" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Features Carousel -->
+        <section class="slider">
+            <div class="swiper image-carousel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/assets/section1.jpg" alt="List your events">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/assets/section2.jpg" alt="Optimize visibility and control">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/assets/section3.jpg" alt="Sell and deliver">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper text-carousel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="text">
+                            <h3>List your events</h3>
+                            <p>Expand your reach by showcasing your events to a global audience. Maximize visibility and attract the right partners.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="text">
+                            <h3>Optimize visibility and control</h3>
+                            <p>Take full control of your events with tools designed to enhance visibility and streamline management.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="text">
+                            <h3>Sell and deliver</h3>
+                            <p>Effortlessly sell and deliver your content with a seamless process that ensures satisfaction for all parties.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- More Features Carousel -->
+        <section class="slider" style="flex-direction: row-reverse;">
+            <div class="swiper image-carousel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/assets/section4.jpg" alt="Seamless transactions & contracting">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/assets/section5.jpg" alt="Discover exclusive content">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/assets/section6.jpg" alt="Integrate and engage">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper text-carousel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="text">
+                            <h3>Seamless transactions & contracting</h3>
+                            <p>Experience a secure and efficient transaction process that simplifies contracting for your events.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="text">
+                            <h3>Discover exclusive content</h3>
+                            <p>Unlock access to unique and premium content that sets your platform apart from the competition.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="text">
+                            <h3>Integrate and engage</h3>
+                            <p>Seamlessly integrate with your platform and captivate your audience with engaging experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <h2>How it works</h2>
+            <details>
+                <summary>What is Content Arena Marketplace?</summary>
+                <p>Content Arena Marketplace is a platform for buying and selling audiovisual betting rights.</p>
+            </details>
+            <details>
+                <summary>How do you buy audiovisual betting rights via Content Arena?</summary>
+                <p>You can browse available rights, negotiate, and complete transactions seamlessly.</p>
+            </details>
+            <details>
+                <summary>How do you stream live events on your betting platform?</summary>
+                <p>Integrate with our platform to stream live events directly to your betting platform.</p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Content Arena</a></p>
+    </footer>
+
+    <!-- Swiper.js Script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper for images
+        const imageCarousel = new Swiper('.image-carousel', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+
+        const textCarousel = new Swiper('.text-carousel', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+
+        // Show success message if "success" query parameter is present
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            document.getElementById('success-message').style.display = 'block';
+            document.getElementById('subscribe-form').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

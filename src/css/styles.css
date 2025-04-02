@@ -1,0 +1,338 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #082c60; /* Updated background color */
+    color: #e0e1dd;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+p, button, input, details summary {
+    font-weight: 400;
+}
+
+/* Top Header */
+.top-header {
+    background-color: #115BDB; /* Complementary color */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-header .logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('/assets/stadium_background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.hero .overlay {
+    background: rgba(8, 44, 96, 0.8); /* Dark overlay with updated color */
+    padding: 90px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #3C96F6; /* Primary color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #ed6d1e; /* Accent color */
+}
+
+/* Slider Section */
+.slider {
+    padding: 2rem;
+    text-align: center;
+    background-color: #115BDB; /* Complementary color */
+    margin: 2rem;
+    border-radius: 10px;
+    display: flex;
+}
+
+.slider h2 {
+    margin-bottom: 1rem;
+    color: #e0e1dd;
+}
+
+/* Image Carousel */
+.image-carousel {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.image-carousel .swiper-slide img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1500 / 850; /* Enforce the aspect ratio */
+    object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Carousel */
+.text-carousel {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.text-carousel .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #e0e1dd;
+}
+
+.text-carousel .swiper-slide h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.text-carousel .swiper-slide p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 30px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.slide-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+}
+
+.slide-content img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slide-content .text {
+    width: 50%;
+    color: #e0e1dd;
+}
+
+.slide-content .text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.slide-content .text p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Reverse layout for the second slider */
+.slide-content.reverse {
+    flex-direction: row-reverse;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 2rem;
+    background-color: #082c60; /* Updated background color */
+    color: #e0e1dd;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+details {
+    margin: 1rem 0;
+    background-color: #115BDB; /* Complementary color */
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+details summary {
+    font-weight: bold;
+    color: #e0e1dd;
+}
+
+details summary:hover {
+    color: #ed6d1e; /* Accent color */
+}
+
+details p {
+    margin-top: 0.5rem;
+    color: #c5c6c7;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #115BDB; /* Complementary color */
+    color: #e0e1dd;
+}
+
+/* Logo Styling */
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* General Body Adjustments */
+    body {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    /* Top Header */
+    .top-header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .top-header .logo img {
+        max-width: 120px; /* Reduce logo size */
+    }
+
+    /* Hero Section */
+    .hero {
+        height: auto; /* Allow height to adjust dynamically */
+    }
+
+    .hero .overlay {
+        padding: 40px; /* Reduce padding */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .hero form {
+        flex-direction: column; /* Stack form elements vertically */
+        gap: 10px;
+    }
+
+    .hero input[type="email"] {
+        width: 100%; /* Full width input */
+    }
+
+    .hero button {
+        width: 100%; /* Full width button */
+    }
+
+    /* Slider Section */
+    .slider {
+        padding: 1rem;
+        margin: 1rem 0;
+        flex-direction: column !important;
+    }
+
+    .image-carousel {
+        max-width: 100%; /* Allow full width on smaller screens */
+    }
+
+    .image-carousel .swiper-slide img {
+        border-radius: 0; /* Remove border radius for a cleaner look */
+    }
+
+    /* FAQ Section */
+    .faq {
+        padding: 1rem;
+    }
+
+    details {
+        padding: 0.5rem;
+    }
+
+    details summary {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    details p {
+        font-size: 0.9rem; /* Adjust paragraph size */
+    }
+
+    /* Footer */
+    footer {
+        padding: 0.5rem;
+        font-size: 0.9rem; /* Adjust footer font size */
+    }
+}
