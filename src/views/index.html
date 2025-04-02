@@ -28,29 +28,17 @@
             color: var(--text-color);
             position: relative;
             overflow: hidden;
+            background: url('/assets/stadium_background.jpg') no-repeat center center/cover;
         }
 
-        /* Overlay Background */
-        .background-overlay {
-            background-color: transparent;
-            background-image: linear-gradient(-45deg, #3399FF 50%, #0001B3 100%);
-            opacity: 0.7;
-            transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            position: absolute;
-            z-index: -1;
-        }
-
-        /* Header */
+        /* Full-Width Fixed Header */
         .top-header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             padding: 1rem 0;
+            background-color: rgba(0, 0, 0, 0.1);
             z-index: 10;
             text-align: center;
         }
@@ -60,8 +48,8 @@
         }
 
         .main-title {
-            font-size: 2.5rem;
-            margin: 2rem 0 1rem;
+            font-size: 3rem;
+            margin: 5rem 0 1rem;
         }
 
         .subtitle {
@@ -75,7 +63,8 @@
             gap: 2rem;
             width: 100%;
             max-width: 1200px;
-            height: 80%
+            height: 400px;
+            padding: 0 2rem; /* Added padding for space around boxes */
         }
 
         .marketplace {
@@ -84,17 +73,17 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 2rem;
+            padding: 3rem;
             border: 2px solid var(--secondary-color);
             border-radius: 8px;
-            background-color: var(--primary-color);
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
             transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
         }
 
         .marketplace:hover {
             transform: translateY(-5px);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            background-color: var(--secondary-color);
+            background-color: rgba(0, 0, 0, 0.7); /* Slightly darker on hover */
         }
 
         .marketplace-link {
@@ -103,26 +92,49 @@
         }
 
         .marketplace h2 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
 
         .marketplace p {
-            font-size: 1rem;
+            font-size: 1.2rem;
             color: var(--text-color);
         }
 
-        footer {
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            color: var(--text-color);
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+                margin: 4rem 0 1rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+            }
+
+            .marketplaces {
+                flex-direction: column;
+                gap: 1rem;
+                height: auto;
+                padding: 0 1rem; /* Adjusted padding for smaller screens */
+            }
+
+            .marketplace {
+                padding: 2rem;
+            }
+
+            .marketplace h2 {
+                font-size: 1.5rem;
+            }
+
+            .marketplace p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Background Overlay -->
-    <div class="background-overlay"></div>
-
     <!-- Top Header with Logo -->
     <header class="top-header">
         <div class="logo">
@@ -153,6 +165,5 @@
             </div>
         </div>
     </main>
-
 </body>
 </html>
