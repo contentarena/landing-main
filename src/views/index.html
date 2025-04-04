@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content Arena</title>
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
     <!-- Google Fonts: Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -14,7 +15,6 @@
             --tertiary-color: #005a87;
             --text-color: #ffffff;
         }
-
 
         body {
             font-family: 'Montserrat', sans-serif;
@@ -72,17 +72,14 @@
             border-radius: 8px;
             background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
             transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            text-decoration: none; /* Remove underline from links */
+            color: var(--text-color); /* Ensure text color is inherited */
         }
 
         .marketplace:hover {
             transform: translateY(-5px);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             background-color: rgba(0, 0, 0, 0.7); /* Slightly darker on hover */
-        }
-
-        .marketplace-link {
-            text-decoration: none;
-            color: var(--text-color);
         }
 
         .marketplace h2 {
@@ -92,12 +89,10 @@
 
         .marketplace p {
             font-size: 1.2rem;
-            color: var(--text-color);
         }
 
         /* Mobile Styles */
         @media (max-width: 768px) {
-
             .main-title {
                 font-size: 2rem;
                 margin: 4rem 0 1rem;
@@ -144,20 +139,16 @@
 
         <div class="marketplaces">
             <!-- Left Side -->
-            <div class="marketplace left">
-                <a href="https://betting.contentarena.com" class="marketplace-link">
-                    <h2>Audiovisual Betting Rights</h2>
-                    <p>Transparent and flexible, match-by-match, market-by-market</p>
-                </a>
-            </div>
+            <a href="https://betting.contentarena.com" class="marketplace left">
+                <h2>Audiovisual Betting Rights</h2>
+                <p>Transparent and flexible, match-by-match, market-by-market</p>
+            </a>
 
             <!-- Right Side -->
-            <div class="marketplace right">
-                <a href="https://media.contentarena.com" class="marketplace-link">
-                    <h2>Broadcast Media Rights</h2>
-                    <p>Easy global access & effortless transactions</p>
-                </a>
-            </div>
+            <a href="https://media.contentarena.com" class="marketplace right">
+                <h2>Broadcast Media Rights</h2>
+                <p>Easy global access & effortless transactions</p>
+            </a>
         </div>
     </main>
 </body>
